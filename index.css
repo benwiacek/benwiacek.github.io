@@ -1,0 +1,22 @@
+body {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+  
+
+    #github-icon {
+      color: lightgreen;
+    }
+
+    #html5-icon {
+      color: #E34C26;
+    }
+
+    #css-icon {
+      color: #1572B6;
+    }
+
+    #js-icon {
+      color: #F0DB4F;
+    }
