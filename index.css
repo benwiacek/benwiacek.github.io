@@ -1,22 +1,86 @@
 body {
-      margin: 0;
-      font-size: 1rem;
-    }
+    margin: 0;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1rem;
+    background-color: #121212;
+    color: #FAFAFA;
+}
 
-  
+header {
+    text-align: center;
+    padding: 1 rem;
+    border-bottom: 1px solid #333;
+}
 
-    #github-icon {
-      color: lightgreen;
-    }
+h1 {
+    font-size: 2rem;
+}
 
-    #html5-icon {
-      color: #E34C26;
-    }
+header p {
+    font-size: 1.25rem;
+}
 
-    #css-icon {
-      color: #1572B6;
-    }
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+}
 
-    #js-icon {
-      color: #F0DB4F;
-    }
+.projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2.5rem;
+}
+
+.project {
+    width: 25rem;
+}
+
+.project .fa-github {
+    margin-left: 0;
+}
+
+.screenshot {
+    width: 25rem;
+}
+
+i {
+    margin: 0 0.5rem;
+}
+
+a {
+    color: lightblue;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+a:visited {
+    color: darkcyan;
+}
+
+.fa-github, .fa-discord, .fa-linkedin {
+    color: white;
+}
+
+.fa-html5 {
+    color: #E34C26;
+}
+
+.fa-css3-alt {
+    color: #1572B6;
+}
+
+.fa-js {
+    color: #F0DB4F;
+}
+
+.netlify {
+    width: 20px;
+    margin: 0 0.5rem;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.75rem;
+}
