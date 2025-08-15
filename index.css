@@ -10,10 +10,15 @@ header {
     text-align: center;
     padding: 1 rem;
     border-bottom: 1px solid #333;
+    margin-bottom: 3rem;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+}
+
+h2{
+    padding-bottom: 2rem;
 }
 
 header p {
@@ -26,61 +31,69 @@ main {
 }
 
 .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+    gap: 2.5rem;
 }
 
 .project {
-    width: 25rem;
+    width: 22rem;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    border-radius: 0.75rem;
 }
 
-.project .fa-github {
+.project .github {
     margin-left: 0;
 }
 
 .screenshot {
-    width: 25rem;
+    width: 22rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-i {
-    margin: 0 0.5rem;
+.screenshot:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px #383838;
 }
 
 a {
-    color: lightblue;
-}
-
-a:hover {
-    font-weight: bold;
-}
-
-a:visited {
     color: darkcyan;
 }
 
-.fa-github, .fa-discord, .fa-linkedin {
-    color: white;
+a:hover {
+    color: lightblue;
 }
 
-.fa-html5 {
-    color: #E34C26;
+
+
+.icon {
+    height: 1.25rem;
+    margin: 0 0.25rem;
 }
 
-.fa-css3-alt {
-    color: #1572B6;
-}
-
-.fa-js {
-    color: #F0DB4F;
-}
-
-.netlify {
-    width: 20px;
-    margin: 0 0.5rem;
+.tech {
+    font-style: italic;
+    margin-bottom:0;
 }
 
 footer {
+    border-top: 1px solid #333;
+    padding: 1rem;
+    margin-top: 5rem;
+}
+
+footer p {
     text-align: center;
     font-size: 0.75rem;
+    margin: 0.5rem auto;
+}
+
+footer .icon {
+    height: 1rem;
+    margin: 0 0.25rem;
+}
+
+footer .email {
+    height: 0.75rem;
 }
