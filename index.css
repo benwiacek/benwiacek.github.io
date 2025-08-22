@@ -67,6 +67,11 @@ section {
     border-radius: 0.75rem;
 }
 
+.project:hover {
+    background-color: #282828;
+    transition: background-color 0.3s ease;
+}
+
 .project .github {
     margin-left: 0;
 }
