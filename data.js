@@ -25,7 +25,7 @@ const projectsList = [
     {
         name: "Password Generator",
         screenshot: "images/passwords-screenshot.png",
-        blurb: "Generates secure, randomized passwords with customizable options. Demonstrates JavaScript loops, conditionals, and string manipulation.",
+        blurb: "Generates secure, randomized passwords with customizable options, using JavaScript loops, conditionals, and string manipulation.",
         repo: "https://github.com/benwiacek/password-generator",
         url: "https://password-generator-ben.netlify.app/",
         tech: ["html", "css", "js"]

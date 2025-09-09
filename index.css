@@ -6,6 +6,47 @@ body {
     color: #FAFAFA;
 }
 
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.navbar {
+    padding-right: 1rem;
+        border-bottom: 1px solid #333;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.navbar li {
+    padding: 0.75rem 3rem;
+}
+
+.navbar ul .nav-link:hover,
+.navbar ul .nav-link.active,
+.navbar ul .nav-link:focus {
+    background-color: grey;
+}
+
+.navbar ul .nav-link:hover a,
+.navbar ul .nav-link.active a,
+.navbar ul .nav-link:focus a {
+    color:#FAFAFA;
+}
+
 header {
     text-align: center;
     padding: 1.5rem;
@@ -28,16 +69,11 @@ h2{
 
 header p {
     font-size: 1.5rem;
-    margin: 0 auto 0 auto;
-}
-
-main {
-    max-width: 1000px;
-    margin: 0 auto;
+    margin: 1rem auto;
 }
 
 section {
-    margin: 0 1rem 0 1rem;
+    margin: 0 1rem;
 }
 
 .intro {
@@ -52,6 +88,26 @@ section {
     color: #ccc;
     text-align: center;
     margin: 0;
+}
+
+.about {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.bio {
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+.profile {
+    margin: 1rem 2rem;
+    width: 250px;
+    height: auto;
+    flex-shrink: 0;
+    flex-grow: 0; 
 }
 
 
