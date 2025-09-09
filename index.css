@@ -10,10 +10,10 @@ body {
 }
 
 main {
-    width: 100%;
-    max-width: 1400px;
+    max-width: min(1400px, 90vw);
     margin: 0 auto;
     flex: 1; 
+    padding: 0 1rem;
 }
 
 .navbar {
@@ -96,46 +96,46 @@ section {
 }
 
 .about {
-    width: 1200px;
     display: flex;
-    justify-content: center;
+    gap: 2rem;
+    align-items: flex-start;
+    max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
-.reach-out {
-    width: 1200px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
+.bio {
+    flex: 1;
+    min-width: 300px; /* Minimum before wrapping */
+    font-size: 1.25rem;
+    padding: 1rem;
 }
+
+.profile {
+    flex: 0 0 250px; /* Don't grow/shrink, stay 250px */
+    height: 250px;
+    object-fit: cover;
+}
+
+
 
 .contacts {
-    display: inline-block;
+    width: 800px;
     list-style-type: none;
     line-height: 2rem;
+    text-align: left;
 }
 
 .contacts a {
     font-weight: bold;
 }
 
-.bio {
-    font-size: 1.25rem;
-    padding: 1rem;
-}
-
-.profile {
-    margin: 1rem 2rem;
-    width: 250px;
-    height: auto;
-    flex-shrink: 0;
-    flex-grow: 0; 
-}
-
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     gap: 2.5rem;
+    justify-content: center;
+    max-width: 1200px;
 }
 
 .project {
@@ -155,6 +155,9 @@ section {
 
 .screenshot {
     width: 100%;
+    height: auto;
+    max-width: 600px;
+    object-fit: contain;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
