@@ -11,6 +11,11 @@ function render() {
             iconList += techIcons[icon]
         })
 
+        let tagList = ""
+        project.tags.forEach(function(tag) {
+            tagList += `<span class="tag">${tag}</span>`
+        })
+
         projectFeed += 
             `<div class="project">
                 <a href="${project.url}" target="_blank" rel="noopener noreferrer"><img class="screenshot" src="${project.screenshot}" alt="${project.name}"/></a>
@@ -21,7 +26,8 @@ function render() {
                         <a href="${project.repo}" target="_blank" rel="noopener noreferrer">${techIcons.github}GitHub</a>
                         <a href="${project.url}" target="_blank" rel="noopener noreferrer"><img class="netlify" src="images/Netlify_logo.svg"/>Live Demo</a>
                     </div>
-                    <p class="tech">Built with: ${iconList}</p>                     
+                    <div class="tech">${iconList}</div>
+                    <div class="tags">${tagList}</div>                   
                 </div>
             </div>`
     })
