@@ -117,13 +117,16 @@ section {
     object-fit: cover;
 }
 
-
-
 .contacts {
     width: 800px;
-    list-style-type: none;
     line-height: 2rem;
     text-align: left;
+    font-size: 1.25em;
+}
+
+.contacts ul  {
+    list-style-type: none;
+    padding: 0;
 }
 
 .contacts a {
