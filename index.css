@@ -74,15 +74,6 @@ header p {
     margin: 1rem auto;
 }
 
-/* PROJECTS */
-
-h2{
-    padding-bottom: 2rem;
-    text-decoration: underline;
-    text-decoration-color: #333;
-    text-underline-offset: 10px;
-}
-
 .intro {
     margin-bottom: 2.5rem;
 }
@@ -97,27 +88,31 @@ h2{
     margin: 0;
 }
 
+/* ABOUT PAGE */
+
 .about {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    flex-wrap: wrap;
 }
 
 .bio {
     flex: 1;
-    min-width: 300px; /* Minimum before wrapping */
+    min-width: 300px;
     font-size: 1.25rem;
     padding: 1rem;
 }
 
 .profile {
-    flex: 0 0 250px; /* Don't grow/shrink, stay 250px */
+    flex: 0 0 250px;
     height: 250px;
     object-fit: cover;
 }
+
+/* CONTACT PAGE */
 
 .contacts {
     width: 800px;
@@ -133,6 +128,15 @@ h2{
 
 .contacts a {
     font-weight: bold;
+}
+
+/* PROJECTS */
+
+h2{
+    padding-bottom: 2rem;
+    text-decoration: underline;
+    text-decoration-color: #333;
+    text-underline-offset: 10px;
 }
 
 .projects {
@@ -230,6 +234,8 @@ a:focus {
     border-radius: 0.5rem;
     display: inline-block;
 }
+
+/* MODAL  */
 
 .modal-background {
     display: none;
@@ -343,6 +349,8 @@ a:focus {
     border-radius: 0.5rem;
     display: inline-block;
 }
+
+/* FOOTER */
 
 footer {
     border-top: 1px solid #333;
