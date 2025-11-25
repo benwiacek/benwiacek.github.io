@@ -7,6 +7,16 @@ const techIcons = {
 
 const projectsList = [
     {
+        name: "Obiwan Kendogu",
+        id: "kendoshop",
+        screenshot: "images/kendoshop-screenshot.png",
+        blurb: "Mock Star Wars theme online Kendo shop where users can add items to a cart, apply discounts, and check out through a modal form.",
+        repo: "https://github.com/benwiacek/kendo-shop",
+        url: "https://obiwan-kendogu.netlify.app/",
+        tech: ["html", "css", "js"],
+        tags: ["Dynamic", "Form handling", "Cart logic"]
+    },
+    {
         name: "Oldagram",
         id: "oldagram",
         screenshot: "images/oldagram-screenshot.png",

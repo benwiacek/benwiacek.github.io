@@ -189,7 +189,8 @@ a:focus {
 }
 
 .tags {
-   padding: 0.25rem 0.25rem 0.25rem 0;
+    font-size: 0.75em;
+    padding: 0.25rem 0.25rem 0.25rem 0;
 }
 
 .fa-brands, 
