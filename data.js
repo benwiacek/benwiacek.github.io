@@ -44,7 +44,7 @@ const projectsList = [
         repo: "https://github.com/benwiacek/password-generator",
         url: "https://password-generator-ben.netlify.app/",
         tech: ["html", "css", "js"],
-        tags: ["Loops", "Math", "Vanilla JS"]
+        tags: ["Loops", "Math functions", "Vanilla JS"]
     },
     {
         name: "Rugby Scoreboard",

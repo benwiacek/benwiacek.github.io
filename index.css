@@ -4,13 +4,13 @@ body {
     font-size: 1rem;
     background-color: #121212;
     color: #FAFAFA;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
 }
 
 main {
-    max-width: min(1400px, 90vw);
+    /* max-width: min(1400px, 90vw); */
     margin: 0 auto;
     flex: 1; 
     padding: 0 1rem;
@@ -18,8 +18,18 @@ main {
 
 /* NAVBAR */
 
+.fa-bars {
+    font-size: 1.75rem;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 0;
+}
+
+#navbar-links {
+    display: none;
+}
+
 .navbar {
-    padding-right: 1rem;
     border-bottom: 1px solid #333;
 }
 
@@ -30,16 +40,13 @@ main {
 }
 
 .navbar ul {
-    display: flex;
     list-style-type: none;
-    justify-content: flex-end;
-    max-width: 1400px;
-    margin: 0 auto;
     padding: 0;
+    margin: 0;
 }
 
 .navbar li {
-    padding: 0.75rem 3rem;
+    padding: 0.5rem 1rem;
 }
 
 .navbar ul .nav-link:hover,
@@ -58,15 +65,14 @@ main {
 
 header {
     text-align: center;
-    padding: 1.5rem;
+    padding: 1rem;
     border-bottom: 1px solid #333;
-    margin-bottom: 1.5rem;
 }
 
 h1 {
-    font-size: 3rem;
-    margin: 1rem auto;
-    line-height: 3rem;
+    font-size: 2.5rem;
+    margin: 0 auto;
+    line-height: 2.5rem;
 }
 
 header p {
@@ -75,11 +81,11 @@ header p {
 }
 
 .intro {
-    margin-bottom: 2.5rem;
+    padding: 1rem;
 }
 
 .intro p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-style: italic;
     font-weight: 500;
     line-height: 1.75rem;
@@ -90,34 +96,21 @@ header p {
 
 /* ABOUT PAGE */
 
-.about {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-
 .bio {
-    flex: 1;
-    min-width: 300px;
     font-size: 1.25rem;
     padding: 1rem;
 }
 
-.profile {
-    flex: 0 0 250px;
-    height: 250px;
-    object-fit: cover;
+.profile-pic {
+    width: 80vw;
+    display: block;
+    margin: 0 auto;
 }
 
 /* CONTACT PAGE */
 
 .contacts {
-    width: 800px;
     line-height: 2rem;
-    text-align: left;
     font-size: 1.25em;
 }
 
@@ -133,44 +126,44 @@ header p {
 /* PROJECTS */
 
 h2{
-    padding-bottom: 2rem;
     text-decoration: underline;
     text-decoration-color: #333;
     text-underline-offset: 10px;
 }
 
-.projects {
+/* .projects {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     gap: 2.5rem;
     justify-content: center;
     max-width: 1200px;
-}
+} */
 
 .project {
     background-color: #1c1c1c;
-    padding: 2rem;
+    padding: 1rem;
+    margin: 1rem 0;
     border-radius: 0.75rem;
-    transition: transform 0.3s ease;
+    /* transition: transform 0.3s ease; */
 }
 
-.project:hover {
+/* .project:hover {
     background-color: #282828;
     transition: background-color 0.3s ease;
     transform: scale(1.03);
     cursor: pointer;
-}
+} */
 
 .screenshot {
     width: 100%;
     height: auto;
-    max-width: 600px;
-    object-fit: contain;
+    /* max-width: 600px; */
+    /* object-fit: contain; */
     border-radius: 0.5rem;
 }
 
 .project-title {
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
@@ -189,13 +182,12 @@ a:focus {
 }
 
 .tags {
-    font-size: 0.75em;
     padding: 0.25rem 0.25rem 0.25rem 0;
 }
 
 .fa-brands, 
 .fa-regular {
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 
 .fa-brands, 
@@ -229,7 +221,6 @@ a:focus {
 
 .tag {
     background-color: grey;
-    color: #FAFAFA;
     padding: 0.25rem 0.5rem;
     margin: 0.25rem;
     border-radius: 0.5rem;
@@ -239,30 +230,49 @@ a:focus {
 /* MODAL  */
 
 .modal-background {
-    display: none;
     position: fixed;
-    left: 0;
-    right: 0;
     top: 0;
-    bottom: 0;
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.3);
+    right: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, display 0.3s ease;
+    z-index: 1000;
 }
 
-.modal-container {
+.modal-background.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
     position: fixed;
     left: 0;
-    right: 0;
-    top: 0;
     bottom: 0;
-    margin: auto;
-    height: 700px;
-    width: 500px;
-    background-color: #1c1c1c;
+    width: 100%;
+    max-height: 85vh;
+    background: #1c1c1c;
     border-radius: 0.75rem;
+    transform: translateY(100%);
     transition: transform 0.3s ease;
+    overflow-y: auto;
+    z-index: 1001;
+}
+
+.modal.active {
+    transform: translateY(0);
+}
+
+.modal::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: #FAFAFA;
+    border-radius: 2px;
+    margin: 0 auto 1rem;
 }
 
 .close-modal-btn-container{
@@ -304,13 +314,10 @@ a:focus {
 }
 
 .project-modal .project-title {
-    font-size: 1.25em;
+    font-size: 1.5rem;
     font-weight: 900;
-}
-
-.project-modal .project-title a {
-    color: #FAFAFA;
     text-decoration: none;
+    color: #FAFAFA;
 }
 
 .project-modal .project-title a:hover,
@@ -323,7 +330,7 @@ a:focus {
 }
 
 .project-modal .tags {
-   padding: 0.25rem 0.25rem 0.25rem 0;
+    padding: 0.25rem 0.25rem 0.25rem 0;
 }
 .project-modal .fa-brands, 
 .project-modal .fa-regular {
@@ -356,12 +363,7 @@ a:focus {
 footer {
     border-top: 1px solid #333;
     padding: 0 1rem 1rem 1rem;
-    margin-top: 5rem;
-}
-
-footer .fa-brands, 
-footer .fa-regular {
-    font-size: 1rem;
+    margin-top: 1rem;
 }
 
 footer p {
