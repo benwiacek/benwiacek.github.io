@@ -27,8 +27,9 @@ function render() {
     projects.innerHTML = projectFeed + `
         <div class="modal-background"></div>
         <div class="modal" id="modal">
+            <div class="modal-drag-handle" aria-label="Close modal"></div>
             <div class="close-modal-btn-container">
-                <button class="modal-close-btn"><i class="fa-regular fa-circle-xmark modal-close-btn"></i></button>
+                <button class="modal-close-btn"><i class="fa-solid fa-xmark fa-sm modal-close-btn"></i></button>
             </div>
             <div class="project-modal">
                 <a class="project-url" href="" target="_blank" rel="noopener noreferrer"><img class="screenshot" src="" alt=""/></a>
@@ -52,19 +53,10 @@ projects.addEventListener("click", function(e) {
     const projectCard = e.target.closest(".project")
     if (projectCard) {
         const projectId = projectCard.dataset.project
-        console.log(projectId)
         fillModal(projectId)
         document.querySelector(".modal-background").classList.add("active")
         document.querySelector(".modal").classList.add("active")
         document.body.style.overflow = "hidden"
-    }
-})
-
-document.addEventListener("click", function(e) {
-    if (e.target.classList.contains("modal-close-btn")) {
-        document.querySelector(".modal-background").classList.remove("active")
-        document.querySelector(".modal").classList.remove("active")
-        document.body.style.overflow = "auto"
     }
 })
 
@@ -77,4 +69,14 @@ function fillModal(id) {
     modal.querySelector(".project-repo").href = project.repo
     modal.querySelector(".tech-icons").innerHTML = (project.tech).map(icon => techIcons[icon]).join(" ")
     modal.querySelector(".tags").innerHTML = (project.tags).map(tag => `<span class="tag">${tag}</span>`).join(" ")
+}
+
+document.querySelector(".modal-drag-handle").addEventListener("click", closeModal);
+document.querySelector(".modal-close-btn").addEventListener("click", closeModal);
+document.querySelector(".modal-background").addEventListener("click", closeModal);
+
+function closeModal() {
+    document.querySelector(".modal-background").classList.remove("active")
+    document.querySelector(".modal").classList.remove("active")
+    document.body.style.overflow = "auto"
 }
