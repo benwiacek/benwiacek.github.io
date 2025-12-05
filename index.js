@@ -24,25 +24,7 @@ function render() {
                 </div>
             </div>`
     })
-    projects.innerHTML = projectFeed + `
-        <div class="modal-background"></div>
-        <div class="modal" id="modal">
-            <div class="modal-drag-handle" aria-label="Close modal"></div>
-            <div class="close-modal-btn-container">
-                <button class="modal-close-btn"><i class="fa-solid fa-xmark fa-sm modal-close-btn"></i></button>
-            </div>
-            <div class="project-modal">
-                <a class="project-url" href="" target="_blank" rel="noopener noreferrer"><img class="screenshot" src="" alt=""/></a>
-                <h3><a class="project-url project-title" href="" target="_blank" rel="noopener noreferrer"></a></h3>
-                <p class="description"></p> 
-                <div class="links">
-                    <a class="project-repo" href="" target="_blank" rel="noopener noreferrer">${techIcons.github}GitHub</a>
-                    <a class="project-url" href="" target="_blank" rel="noopener noreferrer"><img class="netlify" src="images/Netlify_logo.svg"/>Live Demo</a>
-                </div>
-                <div class="tech-icons"></div>
-                <div class="tags"></div>                   
-            </div>
-        </div>`
+    projects.innerHTML = projectFeed
 }
 
 render()
@@ -78,5 +60,16 @@ document.querySelector(".modal-background").addEventListener("click", closeModal
 function closeModal() {
     document.querySelector(".modal-background").classList.remove("active")
     document.querySelector(".modal").classList.remove("active")
-    document.body.style.overflow = "auto"
+    document.body.style.overflow = ""
+
+    setTimeout( () => {
+        modal.querySelectorAll(".project-url").forEach (link => link.href = "")
+        modal.querySelector(".screenshot").src = ""
+        modal.querySelector(".project-title").textContent = ""
+        modal.querySelector(".description").textContent = ""
+        modal.querySelector(".project-repo").href = ""
+        modal.querySelector(".tech-icons").innerHTML = ""
+        modal.querySelector(".tags").innerHTML = ""
+    }, 300)
+    
 }

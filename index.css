@@ -46,6 +46,15 @@ main {
     margin: 0 auto;
 }
 
+header,
+.intro,
+.projects,
+.about,
+.contacts,
+.bio {
+    margin-bottom: var(--spacing-lg);
+}
+
 a {
     color: var(--color-links);
 }
@@ -76,7 +85,7 @@ h3 {
 
 @media (min-width: 768px) {
     main {
-        padding: var(--spacing-lg);
+        padding: 0 var(--spacing-lg);
     }
 }
 
@@ -298,7 +307,7 @@ header p {
     left: 0;
     bottom: 0;
     width: 100%;
-    max-height: 85vh;
+    max-height: 75vh;
     background: var(--color-bg-secondary);
     border-radius: 0.75rem;
     transform: translateY(100%);
@@ -309,6 +318,16 @@ header p {
 
 .modal.active {
     transform: translateY(0);
+}
+
+.modal,
+.modal-background {
+    pointer-events: none;
+}
+
+.modal.active,
+.modal-background.active {
+    pointer-events: auto;
 }
 
 .modal-drag-handle {
