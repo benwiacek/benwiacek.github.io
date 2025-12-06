@@ -53,6 +53,12 @@ function fillModal(id) {
     modal.querySelector(".tags").innerHTML = (project.tags).map(tag => `<span class="tag">${tag}</span>`).join(" ")
 }
 
+const modalBg = document.querySelector(".modal-background")
+
+modalBg.addEventListener("touchmove", (e) => {
+    e.preventDefault()
+}, { passive: false })
+
 document.querySelector(".modal-drag-handle").addEventListener("click", closeModal);
 document.querySelector(".modal-close-btn").addEventListener("click", closeModal);
 document.querySelector(".modal-background").addEventListener("click", closeModal);
