@@ -285,6 +285,7 @@ h3 {
     background-color: var(--color-bg-third);
     transform: translateY(-6px) scale(1.01); /* ← Subtle lift */
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6); /* ← Stronger shadow */
+    border-color: var(--color-secondary);
     cursor: pointer;
 }
 
