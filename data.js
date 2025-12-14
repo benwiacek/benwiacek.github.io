@@ -7,6 +7,16 @@ const techIcons = {
 
 const projectsList = [
     {
+        name: "Movie Watchlist",
+        id: "movie-watchlist",
+        screenshot: "images/watchlist-screenshot.png",
+        blurb: "Dynamic app to help you search for your favorite movies with imdb API and save them in your list.",
+        repo: "https://github.com/benwiacek/movie-watchlist",
+        url: "https://movie-watchlist-ben.netlify.app/",
+        tech: ["html", "css", "js"],
+        tags: ["APIs", "Responsive", "Local Storage"]
+    },
+    {
         name: "Obiwan Kendogu",
         id: "kendoshop",
         screenshot: "images/kendoshop-screenshot.png",
