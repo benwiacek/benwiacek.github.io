@@ -17,11 +17,9 @@ function render() {
         projectFeed +=
             `<div class="project" data-project="${project.id}">
                 <img class="screenshot" src="${project.screenshot}" alt="${project.name}"/>
-                <div class="project-content">
-                    <h3 class="project-title">${project.name}</h3>
-                    <div class="tech-icons">${(project.tech).map(icon => techIcons[icon]).join(" ")}</div>
-                    <div class="tags">${(project.tags).map(tag => `<span class="tag">${tag}</span>`).join(" ")}</div>                   
-                </div>
+                <h3 class="project-title">${project.name}</h3>
+                <div class="tech-icons">${(project.tech).map(icon => techIcons[icon]).join(" ")}</div>
+                <div class="tags">${(project.tags).map(tag => `<span class="tag">${tag}</span>`).join(" ")}</div>                   
             </div>`
     })
     projects.innerHTML = projectFeed
