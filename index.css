@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* == VARIABLES === */
 
 :root {
@@ -38,7 +42,6 @@ body {
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
 }
 
 main {
