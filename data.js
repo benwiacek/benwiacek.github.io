@@ -10,7 +10,7 @@ const projectsList = [
         name: "Movie Watchlist",
         id: "movie-watchlist",
         screenshot: "images/watchlist-screenshot.png",
-        blurb: "Dynamic app to help you search for your favorite movies with imdb API and save them in your list.",
+        blurb: "Movie search and watchlist manager powered by OMDb API with local storage persistence.",
         repo: "https://github.com/benwiacek/movie-watchlist",
         url: "https://movie-watchlist-ben.netlify.app/",
         tech: ["html", "css", "js"],

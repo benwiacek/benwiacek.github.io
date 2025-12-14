@@ -45,6 +45,7 @@ main {
     flex: 1; 
     padding: 0 var(--spacing-base);
     margin: 0 auto;
+    width: 100%;
 }
 
 header,
@@ -116,6 +117,8 @@ h3 {
 @media (min-width: 768px) {
     main {
         padding: 0 var(--spacing-lg);
+        box-sizing: border-box;
+        max-width: 1400px;
     }
 }
 
