@@ -16,7 +16,7 @@ const projectsList = [
         blurb: "A backend-focused Node.js project simulating a gold investment app, to practice native HTTP, file system, and event-driven patterns.",
         repo: "https://github.com/benwiacek/gold-digger",
         tech: ["nodeJs", "js"],
-        tags: ["Real-time updates", "Server-side validation", "Purchase logging"]
+        tags: ["Live pricing", "Server validation", "Purchase logs"]
     },
     {
         name: "Wildlife Quiz",

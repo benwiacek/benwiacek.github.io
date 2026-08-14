@@ -42,8 +42,24 @@ projects.addEventListener("click", function(e) {
 
 function fillModal(id) {
     const project = projectsList.find(project => project.id === id)
-    modal.querySelectorAll(".project-url").forEach (link => link.href = project.url)
-    modal.querySelector(".screenshot").src = project.screenshot
+    modal.querySelectorAll(".project-url").forEach (link => {
+        const demoButton = link.querySelector(".netlify")
+
+        if (project.url) {
+            link.href = project.url
+            link.classList.remove("no-link")
+            if (demoButton) {
+                link.style.display=""
+            }
+        } else {
+            link.removeAttribute("href")
+            link.classList.add("no-link")
+            if (demoButton) {
+                link.style.display="none"
+            }
+        }
+    })
+    modal.querySelector(".screenshot").src = project.screenshotAnimated || project.screenshot
     modal.querySelector(".project-title").textContent = project.name
     modal.querySelector(".description").textContent = project.blurb
     modal.querySelector(".project-repo").href = project.repo
