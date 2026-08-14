@@ -3,10 +3,21 @@ const techIcons = {
     css: '<i class="fa-brands fa-css3-alt"></i>',
     js: '<i class="fa-brands fa-js"></i>',
     github: '<i class="fa-brands fa-github"></i>',
-    react: '<i class="fa-brands fa-react"></i>'
+    react: '<i class="fa-brands fa-react"></i>',
+    nodeJs: '<i class="fa-brands fa-node-js"></i>'
 }
 
 const projectsList = [
+    {
+        name: "Gold Digger",
+        id: "gold-digger",
+        screenshot: "images/golddigger-screenshot.png",
+        screenshotAnimated: "images/golddigger-screenshotAnimated.gif",
+        blurb: "A backend-focused Node.js project simulating a gold investment app, to practice native HTTP, file system, and event-driven patterns.",
+        repo: "https://github.com/benwiacek/gold-digger",
+        tech: ["nodeJs", "js"],
+        tags: ["Real-time updates", "Server-side validation", "Purchase logging"]
+    },
     {
         name: "Wildlife Quiz",
         id: "quiz",
