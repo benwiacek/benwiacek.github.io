@@ -112,11 +112,6 @@ h2 {
     text-underline-offset: 10px;
 }
 
-.devlog h2 {
-    font-size: var(--font-md);
-    text-decoration: underline;
-}
-
 h3 {
     font-size: var(--font-lg);
     font-weight: bold;
@@ -576,4 +571,16 @@ footer p {
         margin-bottom: var(--spacing-base);
     }
 
+}
+
+/* === DEVLOG === */
+
+.devlog h2 {
+    font-size: var(--font-md);
+    text-decoration: underline;
+    color: var(--color-secondary);
+}
+
+.devlog-entry {
+    margin-bottom: 2rem;
 }
