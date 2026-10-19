@@ -37,6 +37,35 @@
 
         <main class="devlog">
             <div class="devlog-entry">
+                <h2>Week of Oct 12, 2026</h2>
+                <p><strong>Parts covered:</strong></p>
+                <ul>
+                    <li>Part 3b - Deploying app to internet</li>
+                    <li>Part 3c - Saving data to MongoDB</li>
+                    <li>Part 3d - Validation and ESLint</li>
+                </ul>
+                <p><strong>Did:</strong></p>
+                <ul>
+                    <li>Completed above parts</li>
+                    <li>Exercises 3.9 to 3.18</li>
+                </ul>
+                <p><strong>Clicked:</strong></p>
+                <ul>
+                    <li>Use of Render for deployment</li>
+                    <li>Matching base urls so both sides can communicate</li>
+                    <li>Use of MangoDB, link to backend and basic queries</li>
+                </ul>
+                <p><strong>Challenges: </strong></p>
+                <ul>
+                    <li>Dev needs two processes and a Vite proxy; production is one Express server serving the built dist</li>
+                    <li>rm/cp in npm scripts break on Windows: use shx</li>
+                    <li>Frontend and backend must agree on response shapes (POST returns the created object, DELETE can’t rely on a body)</li>
+                    <li>Requests going to the wrong server (json-server vs Express vs Render, or Vite’s HTML fallback) looked like code bugs. Check host, status and body in the Network tab</li>
+                    <li>Using debugger and which process to use to follow step by step code (browser, VScode debugger, JS Debug terminal, etc)</li>
+                </ul>
+            </div>
+
+            <div class="devlog-entry">
                 <h2>Week of Oct 5, 2026</h2>
                 <p><strong>Parts covered:</strong></p>
                 <ul>
