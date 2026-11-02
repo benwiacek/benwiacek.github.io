@@ -1,200 +1,281 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <!-- CSS -->
-        <link rel="stylesheet" href="index.css">
-        <!--Fonts  -->
-        <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
-        <!-- Favicons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-        <link rel="manifest" href="/images/favicon/site.webmanifest">
-        <!-- CDN Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- Meta Data -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ben Wiacek | Devlog</title>
-    </head>
-    <body>
-        <nav class="navbar">
-            <i id="menu-icon" class="fa-solid fa-bars"></i>
-            <div id="navbar-links">
-                <ul>
-                    <li class="nav-link"><a href="/">Home</a></li>
-                    <li class="nav-link"><a href="/about">About</a></li>
-                    <li class="nav-link"><a href="/contact">Contact</a></li>
-                    <li class="nav-link active"><a href="/devlog">Devlog</a></li>
-                </ul>
-            </div>
-        </nav>
+  <head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css" />
+    <!--Fonts  -->
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+    <!-- CDN Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Meta Data -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ben Wiacek | Devlog</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <i id="menu-icon" class="fa-solid fa-bars"></i>
+      <div id="navbar-links">
+        <ul>
+          <li class="nav-link"><a href="/">Home</a></li>
+          <li class="nav-link"><a href="/about">About</a></li>
+          <li class="nav-link"><a href="/contact">Contact</a></li>
+          <li class="nav-link active"><a href="/devlog">Devlog</a></li>
+        </ul>
+      </div>
+    </nav>
 
-        <header>
-            <h1 class="devlog-header">Devlog</h1>
-            <p class="hero-sub">Weekly notes on Full Stack Open progress: what I did, what clicked, what took time.</p>
-        </header>
+    <header>
+      <h1 class="devlog-header">Devlog</h1>
+      <p class="hero-sub">
+        Weekly notes on Full Stack Open progress: what I did, what clicked, what
+        took time.
+      </p>
+    </header>
 
-        <main class="devlog">
-            <div class="devlog-entry">
-                <h2>Week of Oct 19, 2026</h2>
-                <p><strong>Parts covered:</strong></p>
-                <ul>
-                    <li>Part 3d - Validation and ESLint</li>
-                </ul>
-                <p><strong>Did:</strong></p>
-                <ul>
-                    <li>Completed above parts</li>
-                    <li>Exercises 3.19 to 3.22</li>
-                </ul>
-                <p><strong>Clicked:</strong></p>
-                <ul>
-                    <li>Validation with mangoose format</li>
-                    <li>.catch block - where and how errors are caught</li>
-                    <li>Fixing linting issues</li>
-                    <li>Better use of debugger, which to check and when</li>
-                </ul>
-                <p><strong>Challenges: </strong></p>
-                <ul>
-                    <li>Linting rule weren't working for front-end files until I realized they were applied only to js file and excluding jsx. Always check the full settings doc.</li>
-                </ul>
-            </div>
+    <main class="devlog">
+      <div class="devlog-entry">
+        <h2>Week of Oct 26, 2026</h2>
+        <p><strong>Parts covered:</strong></p>
+        <ul>
+          <li>
+            Part 4a - Structure of backend application, introduction to testing
+          </li>
+        </ul>
+        <p><strong>Did:</strong></p>
+        <ul>
+          <li>Completed above part</li>
+          <li>Exercises 4.1 to 4.7</li>
+        </ul>
+        <p><strong>Clicked:</strong></p>
+        <ul>
+          <li>Testing format and syntax</li>
+          <li>Thinking of edge cases or adapting tests afterwards</li>
+          <li>Using Lodash, with a much simpler syntax and params</li>
+        </ul>
+        <p><strong>Challenges: </strong></p>
+        <ul>
+          <li>
+            Finding the right methods to use, be it with Vanilla JS or Lodash
+          </li>
+          <li>
+            Using objects and arrays and using data from one format to another
+          </li>
+        </ul>
+      </div>
 
-            <div class="devlog-entry">
-                <h2>Week of Oct 12, 2026</h2>
-                <p><strong>Parts covered:</strong></p>
-                <ul>
-                    <li>Part 3b - Deploying app to internet</li>
-                    <li>Part 3c - Saving data to MongoDB</li>
-                </ul>
-                <p><strong>Did:</strong></p>
-                <ul>
-                    <li>Completed above parts</li>
-                    <li>Exercises 3.9 to 3.18</li>
-                </ul>
-                <p><strong>Clicked:</strong></p>
-                <ul>
-                    <li>Use of Render for deployment</li>
-                    <li>Matching base urls so both sides can communicate</li>
-                    <li>Use of MangoDB, link to backend and basic queries</li>
-                </ul>
-                <p><strong>Challenges: </strong></p>
-                <ul>
-                    <li>Dev needs two processes and a Vite proxy; production is one Express server serving the built dist</li>
-                    <li>rm/cp in npm scripts break on Windows: use shx</li>
-                    <li>Frontend and backend must agree on response shapes (POST returns the created object, DELETE can’t rely on a body)</li>
-                    <li>Requests going to the wrong server (json-server vs Express vs Render, or Vite’s HTML fallback) looked like code bugs. Check host, status and body in the Network tab</li>
-                    <li>Using debugger and which process to use to follow step by step code (browser, VScode debugger, JS Debug terminal, etc)</li>
-                </ul>
-            </div>
+      <div class="devlog-entry">
+        <h2>Week of Oct 19, 2026</h2>
+        <p><strong>Parts covered:</strong></p>
+        <ul>
+          <li>Part 3d - Validation and ESLint</li>
+        </ul>
+        <p><strong>Did:</strong></p>
+        <ul>
+          <li>Completed above parts</li>
+          <li>Exercises 3.19 to 3.22</li>
+        </ul>
+        <p><strong>Clicked:</strong></p>
+        <ul>
+          <li>Validation with mangoose format</li>
+          <li>.catch block - where and how errors are caught</li>
+          <li>Fixing linting issues</li>
+          <li>Better use of debugger, which to check and when</li>
+        </ul>
+        <p><strong>Challenges: </strong></p>
+        <ul>
+          <li>
+            Linting rule weren't working for front-end files until I realized
+            they were applied only to js file and excluding jsx. Always check
+            the full settings doc.
+          </li>
+        </ul>
+      </div>
 
-            <div class="devlog-entry">
-                <h2>Week of Oct 5, 2026</h2>
-                <p><strong>Parts covered:</strong></p>
-                <ul>
-                    <li>Part 3a - Node.js and Express</li>
-                </ul>
-                <p><strong>Did:</strong></p>
-                <ul>
-                    <li>Completed above parts</li>
-                    <li>Exercises 3.1 to 3.8</li>
-                </ul>
-                <p><strong>Clicked:</strong></p>
-                <ul>
-                    <li>Express' simplicity</li>
-                    <li>Postman and VS Code REST client</li>
-                </ul>
-                <p><strong>Challenges: </strong></p>
-                <ul>
-                    <li>Typos in API request (missing '/')</li>
-                    <li>Using the correct method .json() vs .end() or .send()</li>
-                    <li>Ensuring correct content-type is used</li>
-                </ul>
-            </div>
+      <div class="devlog-entry">
+        <h2>Week of Oct 12, 2026</h2>
+        <p><strong>Parts covered:</strong></p>
+        <ul>
+          <li>Part 3b - Deploying app to internet</li>
+          <li>Part 3c - Saving data to MongoDB</li>
+        </ul>
+        <p><strong>Did:</strong></p>
+        <ul>
+          <li>Completed above parts</li>
+          <li>Exercises 3.9 to 3.18</li>
+        </ul>
+        <p><strong>Clicked:</strong></p>
+        <ul>
+          <li>Use of Render for deployment</li>
+          <li>Matching base urls so both sides can communicate</li>
+          <li>Use of MangoDB, link to backend and basic queries</li>
+        </ul>
+        <p><strong>Challenges: </strong></p>
+        <ul>
+          <li>
+            Dev needs two processes and a Vite proxy; production is one Express
+            server serving the built dist
+          </li>
+          <li>rm/cp in npm scripts break on Windows: use shx</li>
+          <li>
+            Frontend and backend must agree on response shapes (POST returns the
+            created object, DELETE can’t rely on a body)
+          </li>
+          <li>
+            Requests going to the wrong server (json-server vs Express vs
+            Render, or Vite’s HTML fallback) looked like code bugs. Check host,
+            status and body in the Network tab
+          </li>
+          <li>
+            Using debugger and which process to use to follow step by step code
+            (browser, VScode debugger, JS Debug terminal, etc)
+          </li>
+        </ul>
+      </div>
 
-            <div class="devlog-entry">
-                <h2>Week of Sept 28, 2026</h2>
-                <p><strong>Parts covered:</strong></p>
-                <ul>
-                    <li>Part 2e - Adding styles to React app</li>
-                </ul>
-                <p><strong>Did:</strong></p>
-                <ul>
-                    <li>Completed above parts</li>
-                    <li>Exercises 2.16 to 2.20</li>
-                </ul>
-                <p><strong>Clicked:</strong></p>
-                <ul>
-                    <li>Refresher on array methods like map, filter, some, reduce, etc.</li>
-                </ul>
-                <p><strong>Challenges: </strong></p>
-                <ul>
-                    <li>Conditional values for const more complex than ternaries</li>
-                    <li>Edge cases for API data or its absence</li>
-                </ul>
-            </div>
+      <div class="devlog-entry">
+        <h2>Week of Oct 5, 2026</h2>
+        <p><strong>Parts covered:</strong></p>
+        <ul>
+          <li>Part 3a - Node.js and Express</li>
+        </ul>
+        <p><strong>Did:</strong></p>
+        <ul>
+          <li>Completed above parts</li>
+          <li>Exercises 3.1 to 3.8</li>
+        </ul>
+        <p><strong>Clicked:</strong></p>
+        <ul>
+          <li>Express' simplicity</li>
+          <li>Postman and VS Code REST client</li>
+        </ul>
+        <p><strong>Challenges: </strong></p>
+        <ul>
+          <li>Typos in API request (missing '/')</li>
+          <li>Using the correct method .json() vs .end() or .send()</li>
+          <li>Ensuring correct content-type is used</li>
+        </ul>
+      </div>
 
-            <div class="devlog-entry">
-                <h2>Week of Sept 21, 2026</h2>
-                <p><strong>Parts covered:</strong></p>
-                <ul>
-                    <li>Part 1c - Component state, event handlers</li>
-                    <li>Part 1d - A more complex state, debugging React apps</li>
-                    <li>Part 2a - Rendering a collection, modules</li>
-                    <li>Part 2b - Forms</li>
-                    <li>Part 2c - Getting data from server</li>
-                    <li>Part 2d - Altering data in server</li>
-                </ul>
-                <p><strong>Did:</strong></p>
-                <ul>
-                    <li>Completed above parts</li>
-                    <li>Exercises 1.6 to 1.14</li>
-                    <li>Exercises 2.1 to 2.15</li>
-                </ul>
-                <p><strong>Clicked:</strong></p>
-                <ul>
-                    <li>State architecture and choice</li>
-                    <li>Props drilling and destructuring</li>
-                    <li>Refresher on array methods like map, filter, some, reduce, etc.</li>
-                    <li>Axios methods</li>
-                    <li>How to avoid redundant state</li>
-                </ul>
-                <p><strong>Challenges: </strong></p>
-                <ul>
-                    <li>Some render models</li>
-                </ul>
-            </div>
+      <div class="devlog-entry">
+        <h2>Week of Sept 28, 2026</h2>
+        <p><strong>Parts covered:</strong></p>
+        <ul>
+          <li>Part 2e - Adding styles to React app</li>
+        </ul>
+        <p><strong>Did:</strong></p>
+        <ul>
+          <li>Completed above parts</li>
+          <li>Exercises 2.16 to 2.20</li>
+        </ul>
+        <p><strong>Clicked:</strong></p>
+        <ul>
+          <li>
+            Refresher on array methods like map, filter, some, reduce, etc.
+          </li>
+        </ul>
+        <p><strong>Challenges: </strong></p>
+        <ul>
+          <li>Conditional values for const more complex than ternaries</li>
+          <li>Edge cases for API data or its absence</li>
+        </ul>
+      </div>
 
-            <div class="devlog-entry">
-                <h2>Week of Sept 14, 2026</h2>
-                <p><strong>Parts covered:</strong></p>
-                <ul>
-                    <li>Part 0 - Fundamentals of Web apps</li>
-                    <li>Part 1a - Introduction to React</li>
-                    <li>Part 1b - JavaScript</li>
-                </ul>
-                <p><strong>Did:</strong></p>
-                <ul>
-                    <li>Completed above parts</li>
-                    <li>Exercises 0.1 to 0.6</li>
-                    <li>Exercises 1.1 to 1.5</li>
-                </ul>
-                <p><strong>Clicked:</strong></p>
-                <ul>
-                    <li>Some new devtools features</li>
-                    <li>Network tab</li>
-                    <li>Good refresher on React and props</li>
-                </ul>
-                <p><strong>Challenges: </strong>n/a.</p>
-            </div>
-        </main>
-        <footer>
-            <p>&copy; 2026 Ben Wiacek. All rights reserved. |
-                <a href="https://github.com/benwiacek/" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/benjamin-wiacek/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="mailto:benjamin.wiacek@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-                </p>
-            <p>Built with JavaScript, HTML, CSS, and lots of caffeine.</p>
-        </footer>
-    </body>
+      <div class="devlog-entry">
+        <h2>Week of Sept 21, 2026</h2>
+        <p><strong>Parts covered:</strong></p>
+        <ul>
+          <li>Part 1c - Component state, event handlers</li>
+          <li>Part 1d - A more complex state, debugging React apps</li>
+          <li>Part 2a - Rendering a collection, modules</li>
+          <li>Part 2b - Forms</li>
+          <li>Part 2c - Getting data from server</li>
+          <li>Part 2d - Altering data in server</li>
+        </ul>
+        <p><strong>Did:</strong></p>
+        <ul>
+          <li>Completed above parts</li>
+          <li>Exercises 1.6 to 1.14</li>
+          <li>Exercises 2.1 to 2.15</li>
+        </ul>
+        <p><strong>Clicked:</strong></p>
+        <ul>
+          <li>State architecture and choice</li>
+          <li>Props drilling and destructuring</li>
+          <li>
+            Refresher on array methods like map, filter, some, reduce, etc.
+          </li>
+          <li>Axios methods</li>
+          <li>How to avoid redundant state</li>
+        </ul>
+        <p><strong>Challenges: </strong></p>
+        <ul>
+          <li>Some render models</li>
+        </ul>
+      </div>
+
+      <div class="devlog-entry">
+        <h2>Week of Sept 14, 2026</h2>
+        <p><strong>Parts covered:</strong></p>
+        <ul>
+          <li>Part 0 - Fundamentals of Web apps</li>
+          <li>Part 1a - Introduction to React</li>
+          <li>Part 1b - JavaScript</li>
+        </ul>
+        <p><strong>Did:</strong></p>
+        <ul>
+          <li>Completed above parts</li>
+          <li>Exercises 0.1 to 0.6</li>
+          <li>Exercises 1.1 to 1.5</li>
+        </ul>
+        <p><strong>Clicked:</strong></p>
+        <ul>
+          <li>Some new devtools features</li>
+          <li>Network tab</li>
+          <li>Good refresher on React and props</li>
+        </ul>
+        <p><strong>Challenges: </strong>n/a.</p>
+      </div>
+    </main>
+    <footer>
+      <p>
+        &copy; 2026 Ben Wiacek. All rights reserved. |
+        <a href="https://github.com/benwiacek/" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/benjamin-wiacek/" target="_blank"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a href="mailto:benjamin.wiacek@gmail.com"
+          ><i class="fa-regular fa-envelope"></i
+        ></a>
+      </p>
+      <p>Built with JavaScript, HTML, CSS, and lots of caffeine.</p>
+    </footer>
+  </body>
 </html>
